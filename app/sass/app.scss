@@ -31,10 +31,16 @@ body {
     }
 
     .social-icons {
-        .fa-github, .fa-linkedin, .fa-bolt, .fa-file-pdf {
+        .fa-github, .fa-linkedin, .fa-bolt, .fa-file-pdf, .fa-instagram {
             color: #313030;
             font-size: 30px;
             margin-right: 10px;
+            transform: scale(1);
+            transition: .35s all;
+
+            &:hover {
+                transform: scale(1.1);
+            }
         }
     }
 }
@@ -101,6 +107,10 @@ body {
 
             .numbers-wrapper {
                 margin-bottom: 5px;
+
+                &:nth-of-type(1) {
+                    margin-bottom: 7px;
+                }
 
                 .number {
                     font-size: 30px;

@@ -1,6 +1,7 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons";
 import {faFilePdf} from "@fortawesome/free-regular-svg-icons";
+import {faInstagram} from "@fortawesome/free-brands-svg-icons";
 
 export function Sidebar() {
     return (
@@ -18,6 +19,10 @@ export function Sidebar() {
 
                 <a href="https://www.linkedin.com/in/norakrane/" target="_blank">
                     <FontAwesomeIcon icon={faLinkedin} />
+                </a>
+
+                <a href="https://instagram.com/moonflowerskyes" target="_blank">
+                    <FontAwesomeIcon icon={faInstagram} />
                 </a>
 
                 <a href="https://norakrane.com/web/wp-content/uploads/2023/09/NoraKrane_Resume.pdf" target="_blank">
