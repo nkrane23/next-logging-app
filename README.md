@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> This code was created using Node.js version 18.14.0 and NPM version 9.8.1
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 # next-logging-app
@@ -12,10 +15,6 @@ First, run the development server:
 next dev
 # or
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
