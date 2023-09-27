@@ -5,6 +5,11 @@ body {
     ::-moz-selection {
         background: #f88e8e; /* Gecko Browsers */
     }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
 }
 
 .sidebar {
@@ -21,16 +26,90 @@ body {
     place-items: center;
     justify-content: space-around;
 
-    .logo-wrap img {
-        transform: scale(1);
-        transition: .35s all;
+    .logo-wrap {
+        @media screen and (max-width: 991px) {
+            display: none;
+        }
 
-        &:hover {
-            transform: scale(1.1);
+        img {
+            transform: scale(1);
+            transition: .35s all;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    .mobile-logo {
+        display: none;
+
+        a {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        @media screen and (max-width: 991px) {
+            display: block;
+            margin: auto;
+        }
+
+        .logo-top {
+            max-width: 145px;
+            display: inline-block;
+
+            @media screen and (max-width: 991px) {
+                padding-left: 25px;
+            }
+
+            @media screen and (max-width: 600px) {
+                max-width: 125px;
+                padding-left: 0;
+            }
+
+            @media screen and (max-width: 500px) {
+                max-width: 100px;
+            }
+        }
+
+        .logo-bottom {
+            max-width: 200px;
+            display: inline-block;
+
+            @media screen and (max-width: 600px) {
+                max-width: 175px;
+            }
+
+            @media screen and (max-width: 500px) {
+                max-width: 150px;
+            }
+
+            @media screen and (max-width: 400px) {
+                display: none;
+            }
+
+            img {
+                padding: 0;
+            }
+        }
+
+        img {
+            padding: 0 15px;
+            transform: scale(1);
+            transition: .35s all;
+
+            &:hover {
+                transform: scale(1.1);
+            }
         }
     }
 
     .social-icons {
+        @media screen and (max-width: 991px) {
+            display: none;
+        }
+
         .fa-github, .fa-linkedin, .fa-bolt, .fa-file-pdf, .fa-instagram {
             color: #313030;
             font-size: 30px;
@@ -43,11 +122,45 @@ body {
             }
         }
     }
+
+    @media screen and (max-width: 991px) {
+        height: 70px;
+        position: relative;
+        width: 100%;
+        padding: 0;
+
+        &.main {
+            z-index: 400;
+        }
+
+        &.clone {
+            opacity: 0;
+            width: 100%;
+            transform: translateY(-100%);
+            transition-duration: 0.7s;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            visibility: hidden;
+        }
+
+        &.sticky {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0%);
+            z-index: 600;
+        }
+    }
 }
 
 .content-area {
     margin-left: 250px;
     color: #000;
+
+    @media screen and (max-width: 991px) {
+        margin-left: 0;
+    }
 
     section {
         padding: 4% 0;
@@ -63,6 +176,11 @@ body {
     .sec-title {
         text-align: center;
         margin-bottom: 4%;
+
+        @media screen and (max-width: 991px) {
+            margin-top: 6%;
+            margin-bottom: 6%;
+        }
 
         h1 {
             font-size: 250%;
@@ -89,6 +207,10 @@ body {
         display: flex;
         flex-flow: row wrap;
 
+        @media screen and (max-width: 750px) {
+            justify-content: center;
+        }
+
         .box {
             border-radius: 5px;
             background: #fff;
@@ -100,6 +222,12 @@ body {
             flex-direction: column;
             display: flex;
             justify-content: space-between;
+
+            @media screen and (max-width: 750px) {
+                flex: 0 1 260px;
+                margin-right: 4%;
+                margin-bottom: 25px;
+            }
 
             &:last-of-type {
                 margin-right: 0;
