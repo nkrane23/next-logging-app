@@ -31,13 +31,13 @@ export function Sidebar() {
             </div>
 
             <div className="mobile-logo">
-                <a href="#">
+                <a href="https://norakrane.com">
                     <div className="logo-top">
-                        <img src="https://norakrane.com/web/wp-content/themes/simple/images/nora-only-logo.png" alt="Nora" />
+                        <img src="/nora-only-logo.png" alt="Nora" />
                     </div>
 
                     <div className="logo-bottom">
-                        <img src="https://norakrane.com/web/wp-content/themes/simple/images/web-developer-text.png" alt="Web Developer" />
+                        <img src="/web-developer-text.png" alt="Web Developer" />
                     </div>
                 </a>
             </div>
