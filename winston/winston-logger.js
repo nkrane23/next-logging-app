@@ -2097,7 +2097,7 @@ export function GeneratedLists() {
             startNum: 0,
             endNum: warnList.loops,
             duration: 2,
-            delay: 1
+            delay: 0
         },
     ];
 
@@ -2106,7 +2106,7 @@ export function GeneratedLists() {
             startNum: 0,
             endNum: warnList.words.length,
             duration: 2,
-            delay: 1
+            delay: 0
         },
     ];
 
@@ -2115,7 +2115,7 @@ export function GeneratedLists() {
             startNum: 0,
             endNum: errorList.loops,
             duration: 2,
-            delay: 2
+            delay: 0
         }
     ];
 
@@ -2124,7 +2124,7 @@ export function GeneratedLists() {
             startNum: 0,
             endNum: errorList.words.length,
             duration: 2,
-            delay: 2
+            delay: 0
         },
     ];
 
