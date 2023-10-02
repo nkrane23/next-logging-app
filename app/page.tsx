@@ -4,8 +4,6 @@ import { Sidebar } from './components/sidebar';
 import ButtonLoader from './components/button';
 
 import { Roboto, Cormorant_Garamond, Bad_Script } from 'next/font/google'
-import {inspect} from "util";
-import colors = module
 
 const sans_serif = Roboto({ weight: '300', subsets: ['latin'] })
 const serif = Cormorant_Garamond({ weight: ['300', '400', '500'], subsets: ['latin'] })
