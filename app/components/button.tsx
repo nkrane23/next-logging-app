@@ -3,17 +3,16 @@
 import React from "react";
 import {useRouter} from "next/navigation";
 
-type ButtonLoaderProps = {
-    children: React.ReactNode
-}
-
-export default function ButtonLoader({children}: ButtonLoaderProps) {
+export default function ButtonLoader() {
     const router = useRouter()
+
+    const handleClick = () => {
+        router.refresh()
+    }
 
     return (
         <div className="list-btn">
-            {children}
-            <button onClick={() => router.refresh()}>New List Please!</button>
+            <button onClick={handleClick}>New List Please!</button>
         </div>
     )
 }
