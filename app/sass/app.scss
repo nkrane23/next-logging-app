@@ -1,9 +1,11 @@
+@import "_variables.scss";
+
 body {
     ::selection {
-        background: #f88e8e; /* WebKit/Blink Browsers */
+        background: $lt-pink; /* WebKit/Blink Browsers */
     }
     ::-moz-selection {
-        background: #f88e8e; /* Gecko Browsers */
+        background: $lt-pink; /* Gecko Browsers */
     }
 
     img {
@@ -156,7 +158,7 @@ body {
 
 .content-area {
     margin-left: 250px;
-    color: #000;
+    color: $black;
 
     @media screen and (max-width: 991px) {
         margin-left: 0;
@@ -198,7 +200,38 @@ body {
                 left: 0;
                 bottom: 0;
                 height: 2px;
-                background: #000;
+                background: $black;
+            }
+        }
+    }
+
+    .list-btn {
+        text-align: center;
+        margin-bottom: 4%;
+
+        button {
+            -webkit-transition: .35s all;
+            transition: .35s all;
+            -webkit-box-shadow: 0px 5px 8px 2px rgba(0,0,0,.25);
+            box-shadow: 0px 5px 8px 2px rgba(0,0,0,.25);
+            text-decoration: none;
+            font-family: "Dosis",Arial,Helvetica,sans-serif;
+            padding: 8px 25px;
+            display: inline-block;
+            text-transform: uppercase;
+            color: $white;
+            font-size: 110%;
+            border-radius: 5px;
+            position: relative;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            background: $green;
+            border: none;
+            cursor: pointer;
+
+            &:hover {
+                -webkit-transform: scale(1.1);
+                transform: scale(1.1);
             }
         }
     }
@@ -213,7 +246,7 @@ body {
 
         .box {
             border-radius: 5px;
-            background: #fff;
+            background: $white;
             padding: 25px;
             -webkit-box-shadow: 0px 5px 9px 1px rgb(0 0 0 / 20%);
             box-shadow: 0px 5px 9px 1px rgb(0 0 0 / 20%);
@@ -235,6 +268,7 @@ body {
 
             .numbers-wrapper {
                 margin-bottom: 5px;
+                text-align: center;
 
                 &:nth-of-type(1) {
                     margin-bottom: 7px;
@@ -244,12 +278,28 @@ body {
                     font-size: 30px;
                     line-height: 1;
                     font-weight: 500;
-                    text-align: center;
+                }
+
+                button.update {
+                    margin-top: 20px;
+                    transition: 0.35s all;
+                    text-decoration: none;
+                    font-family: "Dosis", Arial, Helvetica, sans-serif;
+                    padding: 5px 15px;
+                    display: inline-block;
+                    text-transform: uppercase;
+                    color: $white;
+                    font-size: 14px;
+                    border-radius: 5px;
+                    position: relative;
+                    transform: scale(1);
+                    border: none;
+                    cursor: pointer;
                 }
             }
 
             .data-row {
-                margin-bottom: 10px;
+                margin: 15px 0;
                 text-align: center;
 
                 h3 {
@@ -282,10 +332,14 @@ body {
 
         .info {
             //blue
-            border: 2px solid #0078DBAF;
+            border: 2px solid $lt-blue;
 
             .numbers-wrapper .number, .data-row {
-                color: #0078DBAF;
+                color: $lt-blue;
+            }
+
+            .entries-info button.update {
+                background: $bright-blue;
             }
         }
 
@@ -297,16 +351,21 @@ body {
         }
 
         .warn {
-            // yellow
-            border: 2px solid #ffe400;
+            // purple
+            border: 2px solid $yellow;
 
             .numbers-wrapper .number, .data-row {
-                color: #ffe400;
+                color: $yellow;
+            }
+
+            .entries-warn button.update {
+                background: $yellow;
+                color: $black;
             }
         }
 
         .warn-text {
-            background-color: #ffe400;
+            background-color: $yellow;
             display: inline-block;
             width: 30px;
             height: 30px;
@@ -316,20 +375,93 @@ body {
 
         .error {
             // red
-            border: 2px solid #FF012C99;
+            border: 2px solid $lt-red;
 
             .numbers-wrapper .number, .data-row {
-                color: #FF012C99;
+                color: $lt-red;
+            }
+
+            .entries-error button.update {
+                background: $red;
             }
         }
 
         .error-text {
-            background-color: #FF012C99;
+            background-color: $red;
             display: inline-block;
             width: 30px;
             height: 30px;
             text-align: center;
             font-family: 'Roboto', sans-serif;
+        }
+    }
+
+    .about {
+        margin: 4% auto;
+        border: 2px solid $green;
+        text-align: center;
+        border-radius: 5px;
+        background: $white;
+        padding: 25px;
+        -webkit-box-shadow: 0px 5px 9px 1px rgb(0 0 0 / 20%);
+        box-shadow: 0px 5px 9px 1px rgb(0 0 0 / 20%);
+        max-width: 870px;
+
+        h3 {
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 1.5em;
+        }
+
+        .highlight {
+            position: relative;
+            display: inline-block;
+            z-index: 1;
+
+             &:after {
+                 content: "";
+                 height: 15px;
+                 position: absolute;
+                 left: 0;
+                 top: 5px;
+                 padding: 0 10px;
+                 width: 85%;
+                 display: block;
+                 z-index: -1;
+                 //background-color: rgb(115 167 83 / 60%);
+                 background-color: rgba(0,219,206,.69);
+                 -webkit-transition: .35s ease-in-out;
+                 transition: .35s ease-in-out;
+             }
+        }
+
+        .highlight-two {
+            position: relative;
+            display: inline-block;
+            z-index: 1;
+
+            &:after {
+                content: "";
+                height: 15px;
+                position: absolute;
+                left: 0;
+                top: 5px;
+                padding: 0 10px;
+                width: 85%;
+                display: block;
+                z-index: -1;
+                background-color: rgba(255,228,0,.69);
+                -webkit-transition: .35s ease-in-out;
+                transition: .35s ease-in-out;
+            }
+        }
+
+        .highlight-three {
+            padding: 0.2rem 0.4rem;
+            font-size: 90%;
+            color: #bd4147;
+            background-color: #e0e0e0;
+            border-radius: 0.25rem;
         }
     }
 }

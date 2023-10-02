@@ -2130,25 +2130,24 @@ export function GeneratedLists() {
 
     return (
         <div className="results">
-
             <div className="box info">
                 <div className="title"><h2>Info Log Entries</h2></div>
 
-                <div className="numbers-wrapper">
+                <div className="entries-info">
                     {infoEntries.map((data, i) => (
                         <Counter data={data} key={i} />
                     ))}
+
+                    <div className="title"><h3>Total Entries Created</h3></div>
                 </div>
 
-                <div className="title"><h3>Total Entries Created</h3></div>
-
-                <div className="numbers-wrapper">
+                <div className="entries-info">
                     {infoListCount.map((data, i) => (
                         <Counter data={data} key={i} />
                     ))}
-                </div>
 
-                <div className="title"><h3>List Count</h3></div>
+                    <div className="title"><h3>List Count</h3></div>
+                </div>
 
                 <div className="data-row">
                     <h3>{ infoListData }</h3>
@@ -2159,21 +2158,21 @@ export function GeneratedLists() {
             <div className="box warn">
                 <div className="title"><h2>Warn Log Entries</h2></div>
 
-                <div className="numbers-wrapper">
+                <div className="entries-warn">
                     {warnEntries.map((data, i) => (
                         <Counter data={data} key={i} />
                     ))}
+
+                    <div className="title"><h3>Total Entries Created</h3></div>
                 </div>
 
-                <div className="title"><h3>Total Entries Created</h3></div>
-
-                <div className="numbers-wrapper">
+                <div className="entries-warn">
                     {warnListCount.map((data, i) => (
                         <Counter data={data} key={i} />
                     ))}
-                </div>
 
-                <div className="title"><h3>List Count</h3></div>
+                    <div className="title"><h3>List Count</h3></div>
+                </div>
 
                 <div className="data-row">
                     <h3>{ warnListData }</h3>
@@ -2184,21 +2183,20 @@ export function GeneratedLists() {
             <div className="box error">
                 <div className="title"><h2>Error Log Entries</h2></div>
 
-                <div className="numbers-wrapper">
+                <div className="entries-error">
                     {errorEntries.map((data, i) => (
                         <Counter data={data} key={i} />
                     ))}
+                    <div className="title"><h3>Total Entries Created</h3></div>
                 </div>
 
-                <div className="title"><h3>Total Entries Created</h3></div>
-
-                <div className="numbers-wrapper">
+                <div className="entries-error">
                     {errorListCount.map((data, i) => (
                         <Counter data={data} key={i} />
                     ))}
-                </div>
 
-                <div className="title"><h3>List Count</h3></div>
+                    <div className="title"><h3>List Count</h3></div>
+                </div>
 
                 <div className="data-row">
                     <h3>{ errorListData }</h3>
@@ -2208,5 +2206,3 @@ export function GeneratedLists() {
         </div>
     );
 }
-
-// add button to click for log generation trigger?
