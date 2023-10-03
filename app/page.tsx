@@ -23,7 +23,7 @@ export default function Home() {
                     </div>
 
                     <div className={ serif.className }>
-                        <ButtonLoader>
+                        <ButtonLoader state={0}>
                         </ButtonLoader>
 
                         <GeneratedLists/>

@@ -2,7 +2,6 @@
 
 import React from "react";
 import {useRouter} from "next/navigation";
-import { useState } from 'react';
 
 type ButtonLoaderProps = {
     children: React.ReactNode
